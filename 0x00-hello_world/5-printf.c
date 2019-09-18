@@ -1,0 +1,10 @@
+#include <stdio.h>
+/**
+* main - Prints using printf() command
+* Return: 0 prints phrase
+*/
+int main(void)
+{
+	Printf("with proper grammar, but the outcome is a piece of art,\n");
+	return (0);
+}
