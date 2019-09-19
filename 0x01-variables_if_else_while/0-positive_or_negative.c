@@ -1,8 +1,9 @@
 #include <stdio.h>
+#include <sdtio.h>
 #include <time.h>
-#include <stdlib.h>
+
 /**
- * main - n is greater positive, negative or zero
+ * main - n is positive, negative or zero
  *
  * Return: Always 0 (Success)
  */
