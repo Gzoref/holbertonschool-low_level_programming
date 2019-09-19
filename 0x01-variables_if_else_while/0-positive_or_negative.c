@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <time.h>
+#include <stdlib.h>
 /**
  * main - n is greater positive, negative or zero
  *
