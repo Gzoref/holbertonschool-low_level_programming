@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <sdtio.h>
+#include <stdlib.h>
 #include <time.h>
 
 /**
@@ -23,7 +23,9 @@ int main(void)
 	}
 	else
 	{
-		printf("%d is zero\n");
+		printf("%d is zero\n", n);
 	}
+	printf("\n");
+
 	return (0);
 }
