@@ -27,7 +27,7 @@ int main(void)
 			{
 				putchar(fTens + '0');
 				putchar(fOnes + '0');
-				putchar(',');
+				putchar(' ');
 				putchar(sTens + '0');
 				putchar(sOnes + '0');
 
