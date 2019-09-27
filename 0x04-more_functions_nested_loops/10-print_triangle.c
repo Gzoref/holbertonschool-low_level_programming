@@ -15,23 +15,23 @@ void print_triangle(int size)
 
 	i = 1;
 
-	if(size < 0)
+	if (size <= 0)
 	{
 		_putchar('\n');
 	}
 
-	while(size > 0)
+	while (size > 0)
 	{
-		spaces = size -1;
+		spaces = size - 1;
 
-		while(spaces > 0)
+		while (spaces > 0)
 		{
 			_putchar(' ');
 			--spaces;
 		}
 		hash = 0;
 
-		while(hash != i)
+		while (hash != i)
 		{
 			_putchar('#');
 			hash++;
