@@ -5,7 +5,7 @@
  *
  * @n: int type
  *
-   Return: return integer values
+ *  Return: void
  */
 
 void print_number(int n)
