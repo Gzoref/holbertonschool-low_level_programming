@@ -10,7 +10,6 @@
 void print_number(int n)
 {
 
-
 	int len, index;
 
 	len = 1000000000;
@@ -26,7 +25,6 @@ void print_number(int n)
 	}
 	n = -n;
 	}
-
 	while(len != 1)
 	{
 		if (n >= len)
