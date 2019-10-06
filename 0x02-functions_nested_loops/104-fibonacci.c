@@ -34,7 +34,7 @@ int main(void)
 	{
 		printf("%ld", div1);
 
-		if(index == 97)
+		if (index == 97)
 			printf("%ld\n", div2);
 		else
 			printf("ld, ", div2);
