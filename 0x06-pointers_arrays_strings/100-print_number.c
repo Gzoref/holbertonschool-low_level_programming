@@ -1,7 +1,9 @@
 #include "holberton.h"
 /**
  * print_number -Prints an integer
+ *
  * @n: input integer
+ *
  * Return: void
  */
 
@@ -9,34 +11,34 @@ void print_number(int n)
 {
 
 
-	int len, rem, ones, place;
+	int len, index;
 
-	ones = n % 10;
-	n /= 10;
-	len = 1;
-	place = n;
+	len = 1000000000;
 
-	if(ones < 0)
+	if(n < 0)
 	{
-		ones *= -1;
-		place *= -1;
-		n *= -1;
 		_putchar('-');
+
+	if (n == -2147483648)
+	{
+		index = 1;
+		n += 1;
+	}
+	n = -n;
+	}
+
+	while(len != 1)
+	{
+		if (n >= len)
+			_putchar((n / len) % 10 + '0');
+		len /= 10;
+   	}
+	if(index == 1)
+	{
+		_putchar(((n % 10) + 1) + '0');
 	}
 	else
 	{
-		while(place / 10 != 0)
-
-			place /= 10;
-		        len *= 10;
-
-		while(len > 0)
-		{
-			rem = n / len;
-			_putchar(rem + '0');
-			n -= rem * len;
-			len /= 10;
-		}
+		_putchar(n % 10 + '0');
 	}
-	_putchar(ones + '0');
 }
