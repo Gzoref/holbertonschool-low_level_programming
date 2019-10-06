@@ -14,7 +14,7 @@ void print_number(int n)
 
 	len = 1000000000;
 
-	if(n < 0)
+	if (n < 0)
 	{
 		_putchar('-');
 
@@ -25,13 +25,13 @@ void print_number(int n)
 	}
 	n = -n;
 	}
-	while(len != 1)
+	while (len != 1)
 	{
 		if (n >= len)
 			_putchar((n / len) % 10 + '0');
 		len /= 10;
-   	}
-	if(index == 1)
+	}
+	if (index == 1)
 	{
 		_putchar(((n % 10) + 1) + '0');
 	}
