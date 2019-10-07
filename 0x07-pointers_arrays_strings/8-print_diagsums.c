@@ -6,7 +6,7 @@
  *
  * @a: pointer to array
  *
- *  @size: int
+ * @size: int
  *
  *Return: sum of two sides
  *
@@ -25,7 +25,7 @@ void print_diagsums(int *a, int size)
 	}
 	for (counter2 = 0; counter2 < size; counter2++)
 	{
-		sum2 += a[(size - 1) + (counter2 + 1)];
+		sum2 += a[(size - 1) * (counter2 + 1)];
 	}
 	printf("%d %d\n", sum1, sum2);
 }
