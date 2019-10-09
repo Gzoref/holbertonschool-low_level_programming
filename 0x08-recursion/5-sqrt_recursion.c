@@ -3,12 +3,16 @@
 /**
  * helper - function to loop eith new second variable
  *
+ * @n: int arg
+ * @result: int arg
+ *
  * Return: sqaure root
  */
 
 int helper(int n, int result)
 {
-	if (result * result == n) {
+	if (result * result == n)
+	{
 		return (result);
 	}
 	else if (result * result > n)
@@ -29,7 +33,8 @@ int helper(int n, int result)
 
 int _sqrt_recursion(int n)
 {
-	if (n < 0) {
+	if (n < 0)
+	{
 		return (-1);
 	}
 	return (helper(n, 0));
