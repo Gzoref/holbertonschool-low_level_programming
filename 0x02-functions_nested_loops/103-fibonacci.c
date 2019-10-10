@@ -22,7 +22,7 @@ int main(void)
 		fib1 = fib3;
 		fib3 = fib2;
 
-		if (fib1 % 2 == 0)
+		if (fib2 % 2 == 0)
 		{
 			sum += fib2;
 		}
