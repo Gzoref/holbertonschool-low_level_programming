@@ -17,7 +17,8 @@ int  _atoi(char *s)
 
 	for (index = 0; s[index] != '\0'; index++)
 	{
-		if (s[index] == '-') {
+		if (s[index] == '-')
+		{
 			sign++;
 		}
 		if (s[index] > 47 && s[index] < 58)
