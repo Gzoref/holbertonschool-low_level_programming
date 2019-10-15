@@ -11,6 +11,7 @@
  *
  *  Return: strTemp
  */
+
 char *str_concat(char *s1, char *s2)
 {
 	int counter1, counter2, i, j;
@@ -27,21 +28,20 @@ char *str_concat(char *s1, char *s2)
 	{
 		s2 = "";
 	}
-
 	while (s1[counter1] != '\0')
 	{
 		counter1++;
 	}
-
 	while (s2[counter2] != '\0')
 	{
 		counter2++;
 	}
-
 	counter2++;
-
 	strTemp = malloc(sizeof(char) * (counter1 + counter2));
-
+	if (strTemp == NULL)
+	{
+		return (NULL);
+	}
 	for (i = 0; i < counter1; i++)
 	{
 		strTemp[i] =  s1[i];
@@ -51,6 +51,5 @@ char *str_concat(char *s1, char *s2)
 	{
 		strTemp[i + j] = s2[j];
 	}
-
 	return (strTemp);
 }
