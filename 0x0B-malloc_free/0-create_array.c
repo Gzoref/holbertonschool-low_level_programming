@@ -38,7 +38,5 @@ char *create_array(unsigned int size, char c)
 
 	character[counter] = '\0';
 
-	free(character);
-
 	return (character);
 }
