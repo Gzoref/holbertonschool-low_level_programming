@@ -1,8 +1,4 @@
-
-General
-- What is debugging
-- What are some methods of debugging manually
-- How to read the error messages
-
-
-
+- What is the difference between automatic and dynamic allocation
+- What is malloc and free and how to use them
+- Why and when use malloc
+- How to use valgrind to check for memory leak
