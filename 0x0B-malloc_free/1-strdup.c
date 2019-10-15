@@ -26,9 +26,13 @@ char *_strdup(char *str)
 	{
 		counter1++;
 	}
-	counter1++;
 
 	strCopy = malloc(sizeof(char) * counter1);
+
+	if(strCopy == NULL)
+	{
+		return (NULL);
+	}
 
 	while (counter2 < counter1)
 	{
