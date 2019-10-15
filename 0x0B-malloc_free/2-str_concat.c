@@ -38,6 +38,8 @@ char *str_concat(char *s1, char *s2)
 		counter2++;
 	}
 
+	counter2++;
+
 	strTemp = malloc(sizeof(char) * (counter1 + counter2));
 
 	for (i = 0; i < counter1; i++)
