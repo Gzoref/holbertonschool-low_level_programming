@@ -2,7 +2,7 @@
 #include "holberton.h"
 
 /**
- * create_array - Print name of program
+ * create_array - Returns a pointer to a newly allocated space in memory.
  *
  * @size: unsigned int
  *
@@ -18,13 +18,18 @@ char *create_array(unsigned int size, char c)
 
 	counter = 0;
 
-	character = malloc(sizeof(char) * size);
 
-	if (size == 0 || character == NULL)
+	if (size == 0)
 	{
 		return (NULL);
 	}
 
+	character = malloc(sizeof(char) * size);
+
+	if (character == NULL)
+	{
+		return (NULL);
+	}
 	while (counter < size)
 	{
 		character[counter] = c;
