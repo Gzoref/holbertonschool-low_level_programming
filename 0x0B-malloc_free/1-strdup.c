@@ -29,7 +29,7 @@ char *_strdup(char *str)
 
 	strCopy = malloc(sizeof(char) * counter1);
 
-	if(strCopy == NULL)
+	if (strCopy == NULL)
 	{
 		return (NULL);
 	}
@@ -39,6 +39,8 @@ char *_strdup(char *str)
 		strCopy[counter2] = str[counter2];
 		counter2++;
 	}
+
+	strCopy[counter2] = '\0';
 
 	return (strCopy);
 }
