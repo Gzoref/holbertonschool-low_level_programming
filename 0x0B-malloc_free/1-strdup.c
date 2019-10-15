@@ -2,10 +2,9 @@
 #include "holberton.h"
 
 /**
- * _strdup - Print name of program
+ * _strdup - copy of the string given as a parameter.
  *
  * @str: unsigned int
- *
  *
  * Return: char pointer
  */
@@ -27,6 +26,7 @@ char *_strdup(char *str)
 	{
 		counter1++;
 	}
+	counter1++;
 
 	strCopy = malloc(counter1 * sizeof(char));
 
