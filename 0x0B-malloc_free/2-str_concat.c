@@ -51,8 +51,6 @@ char *str_concat(char *s1, char *s2)
 	{
 		strTemp[i + j] = s2[j];
 	}
-
 	strTemp[i + j] = '\0';
-
 	return (strTemp);
 }
