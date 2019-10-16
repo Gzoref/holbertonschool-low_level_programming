@@ -39,7 +39,7 @@ char *argstostr(int ac, char **av)
 
 	for (counter1 = 0, counter3 = 0; counter1 < ac; counter1++)
 	{
-		for (counter2 = 0; av[counter1][counter2] != 0; counter2++, counter3++)
+		for (counter2 = 0; av[counter1][counter2] != '\0'; counter2++, counter3++)
 		{
 			strTemp[counter3] = av[counter1][counter2];
 		}
