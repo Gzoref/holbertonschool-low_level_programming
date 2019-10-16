@@ -14,7 +14,7 @@
 
 char *argstostr(int ac, char **av)
 {
-	int counter1 = 0, counter2 = 0, counter3 = 0;
+	int counter1, counter2, counter3 = 0;
 	char *strTemp;
 
 	if (ac == 0 || av == NULL)
@@ -22,15 +22,15 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	}
 
-	for (; counter1 < ac; counter1++)
+	for (counter1 = 0; counter1 < ac; counter1++)
 	{
-		for (; av[counter1][counter2] != 0; counter2++, counter3++)
+		for (counter2 = 0; av[counter1][counter2] != '\0'; counter2++, counter3++)
 		{
 			;
 		}
 	}
 
-	strTemp = malloc(sizeof(char) * counter3 + ac + 1);
+	strTemp = malloc(sizeof(char) * (counter3 + ac + 1));
 
 	if (strTemp == NULL)
 	{
