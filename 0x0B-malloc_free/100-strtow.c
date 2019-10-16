@@ -1,40 +1,71 @@
 #include "holberton.h"
+#include <stdlib.h>
 
+/**
+ * wordcount - Count number of words
+ *
+ * @str: char pointer
+ *
+ * Return: Word count
+ */
 
-int word_count(char *str, int n, char firstChar)
+int word_count(char *str)
 {
-	int wordCount, flag, i, charCount;
+	int counter, wordCount, letter;
 
-	str[0] != ' ' ? wordCount = 1 : wordCount = 0;
-
-	for (i = 0, flag = 0; str[i]; i++)
+	for (counter = 0; str[counter] != '\0'; counter++)
 	{
-		if (str[i] == ' ' && str[i + 1] != ' ' && str[i +1] != '\0' && flag == 0)
+		if (str[counter] != ' ' && (!(letter)))
 		{
+			letter = 1;
 			wordCount++;
-			flag = 1;
 		}
-
-		if (n > 0 && n == wordCount)
+		else if (str[counter] == ' ' && letter)
 		{
-			if (n > 0 && n == wordCount && firstChar > 0)
-			{
-				return (i);
-			}
-			for (charCount = 0; str[i + charCount + 1] != ' '; i++)
-			{
-				;
-			}
-			return (charCount);
+			letter = 0;
 		}
-		if (str[i] == ' ')
-		{
-			flag = 0;
-		}
-		return (wordCount);
+		counter++;
 	}
+	return (wordCount);
 }
 
+
+/**
+ * first_word - Gets first word
+ * @str: char pointer
+ * Return: Pointer to word
+ */
+
+char first_word(char *str)
+{
+	int counter;
+	char *word;
+
+	counter = 0;
+
+	while (str[counter] != '\0' && str[counter] != '\0')
+	{
+		counter++;
+	}
+
+	word = malloc(sizeof(char) * (counter + 1));
+
+		if (!(word))
+		{
+			return (NULL);
+		}
+
+		word[counter] = '\0';
+
+		counter--;
+
+		while (counter >= 0)
+		{
+			word[counter] = str[counter];
+			counter--;
+		}
+		return (word);
+}
 
 
 /**
@@ -48,16 +79,56 @@ int word_count(char *str, int n, char firstChar)
 char **strtow(char *str)
 {
 	char **strArr;
-	int wordLen, firstChar,length, wordCount, i, j;
+	int wordCount, counter, letter;
 
-	if (str == NULL || str == "")
-	{
+	if (str == NULL || str == '\0')
 		return (NULL);
+
+	wordCount = word_count(str);
+
+	strArr = malloc(sizeof(char *) * (wordCount + 1));
+
+	if (!(strArr))
+		return NULL;
+
+	for (counter = 0; counter <= wordCount; counter++)
+	{
+		strArr[counter] = NULL;
 	}
 
-	for (i = 0; str[i] != '\0'; ++i)
+	counter = 0;
+	wordCount = 0;
+
+	while (str[counter] != '\0')
 	{
-		
+		if (str[counter] != ' ' && (!(letter)))
+		{
+			strArr[wordCount] = first_word(str + counter);
+
+			if (!(strArr[wordCount]))
+			{
+				wordCount--;
+
+				while (wordCount >= 0)
+				{
+					free(strArr[wordCount--]);
+					free(strArr);
+					return NULL;
+				}
+				wordCount++;
+				letter = 1;
+			}
+			else if (str[counter] == ' ' && letter)
+			{
+				letter = 0;
+			}
+			counter++;
+		}
+		if (!(wordCount))
+		{
+			return NULL;
+		}
 	}
+	return (strArr);
 
 }
