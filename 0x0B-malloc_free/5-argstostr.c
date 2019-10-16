@@ -30,7 +30,7 @@ char *argstostr(int ac, char **av)
 		}
 	}
 
-	strTemp = malloc(sizeof(char) * (counter3 + ac + 1));
+	strTemp = malloc(sizeof(char) * counter3 + ac + 1);
 
 	if (strTemp == NULL)
 	{
