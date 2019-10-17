@@ -30,7 +30,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	while (s2[counter2] != '\0')
 		counter2++;
 
-	if (n >= counter2)
+	if (n > counter2)
 	{
 	strTemp = malloc(sizeof(char) * (counter1 + counter2 + 1));
 	}
