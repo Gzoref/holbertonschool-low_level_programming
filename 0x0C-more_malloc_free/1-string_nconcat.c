@@ -32,12 +32,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (n > counter2)
 	{
-	strTemp = malloc(sizeof(char) * (counter1 + counter2 + 1));
+		n = counter2;
 	}
-	else
-	{
-		strTemp = malloc(sizeof(char) * (counter1 + n + 1));
-	}
+	strTemp = malloc(sizeof(char) * (counter1 + (n + 1)));
 
 	if (strTemp == NULL)
 	{
@@ -51,7 +48,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (j = 0; j < n; j++)
 	{
 		strTemp[i] = s2[j];
-		i++
+		i++;
 	}
 	strTemp[i] = '\0';
 	return (strTemp);
