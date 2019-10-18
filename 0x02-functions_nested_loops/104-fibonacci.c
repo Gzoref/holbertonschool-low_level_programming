@@ -2,45 +2,51 @@
 #include <stdio.h>
 
 /**
- * main - Prints the first 98 Fibonacci numbers
+ * main - Print first 98 Fibonacci numbers
  *
  * Return: 0
  */
 
 int main(void)
 {
-	int index;
-	long int remainder1, remainder2, fib1, fib2, div1, div2, quot;
+	int counter;
+	unsigned long int carry, fib1Left, fib1Right, fib2Right, fib2Left,
+		left, right;
 
-	fib1 = 0;
-	fib2 = 1;
-	div1 = 0;
-	div2 = 0;
-	remainder1 = 0;
-	remainder2 = 2;
+	fib1Left = 0;
+	fib2Right = 2;
+	fib1Right = 0;
+	fib2Left = 0;
+	left = 0;
+	right = 0;
 
-	printf("%ld, %ld, ", fib1, fib2);
 
-	for (index = 2; index < 98; index++)
+	printf("%lu, %lu", fib1Left, fib2Right);
+
+	for (counter = 2; counter < 98; counter++)
 	{
-		quot = (fib1 + fib2) / 100000000000;
-		div1 = fib1 + fib2 + quot;
-		fib1 = remainder1;
-		remainder1 = div1;
-		fib2 = remainder2;
-		remainder2 = div2;
-	}
-	if (div1 > 0)
-	{
-		printf("%ld", div1);
+		carry = (fib1Right + fib2Right) / 100000000000;
+		left = fib1Left + fib2Left + carry;
+		 right = (fib1Right + fib2Right) % 100000000000;
+		fib1Left = fib2Left;
+		fib2Left = left;
+		fib1Right = fib2Right;
+		fib2Right = right;
 
-		if (index == 97)
-			printf("%ld\n", div2);
-		else
-			printf("ld, ", div2);
-	}
-	else
-		printf("%ld, ", div2);
+		if (left > 0)
+		{
+			printf("%lu", left);
 
+			if (counter == 97)
+			{
+				printf("%lu\n", right);
+			}
+			else
+			{
+				printf("%lu\n", right);
+			}
+
+		}
+	}
 	return (0);
 }
