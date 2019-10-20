@@ -10,43 +10,43 @@
 int main(void)
 {
 	int counter;
-	unsigned long int carry, fib1Left, fib1Right, fib2Right, fib2Left,
-		left, right;
+	unsigned long int fib1, fib1a, fib1b, fib2, fib2a, fib2b,
+		fib3, fib3a, fib3b;
 
-	fib1Left = 0;
-	fib2Right = 2;
-	fib1Right = 0;
-	fib2Left = 0;
-	left = 0;
-	right = 0;
+	fib1 = 0;
+	fib2 = 1;
 
-
-	printf("%lu, %lu", fib1Left, fib2Right);
-
-	for (counter = 2; counter < 98; counter++)
+	for (counter = 0; counter < 98; counter++)
 	{
-		carry = (fib1Right + fib2Right) / 100000000000;
-		left = fib1Left + fib2Left + carry;
-		 right = (fib1Right + fib2Right) % 100000000000;
-		fib1Left = fib2Left;
-		fib2Left = left;
-		fib1Right = fib2Right;
-		fib2Right = right;
+		fib3  = (fib2  + fib1);
+		fib1 = fib2;
+		fib2 = fib3;
 
-		if (left > 0)
-		{
-			printf("%lu", left);
+		printf("%lu, ", fib3);
 
-			if (counter == 97)
-			{
-				printf("%lu\n", right);
-			}
-			else
-			{
-				printf("%lu\n", right);
-			}
-
-		}
 	}
-	return (0);
+		fib1a = fib1 / 100000000000;
+		fib1b = fib1 % 100000000000;
+		fib2a = fib2 % 100000000000;
+		fib2b = fib2 % 100000000000;
+
+		for (; counter < 98 ; counter++)
+		{
+			fib3a = fib1a + fib2a;
+			fib3b = fib1b + fib2b;
+		}
+
+		if (counter != 97)
+		{
+			printf("%lu%lu", fib3a, fib3b);
+			fib1a = fib2a;
+			fib1b = fib2b;
+			fib2a = fib3a;
+			fib2b = fib3b;
+		}
+		else
+		{
+			printf("%lu%lu\n", fib3a, fib3b);
+		}
+		return (0);
 }
