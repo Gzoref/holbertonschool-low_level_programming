@@ -33,7 +33,6 @@ int main(void)
 			fib3a = fib1a + fib2a;
 			fib3b = fib1b + fib2b;
 		}
-
 		if (fib3b > 10000000000)
 		{
 			fib3b %= 10000000000;
@@ -48,8 +47,6 @@ int main(void)
 			fib2b = fib3b;
 		}
 		else
-		{
 			printf("%lu%lu\n", fib3a, fib3b);
-		}
 		return (0);
 }
