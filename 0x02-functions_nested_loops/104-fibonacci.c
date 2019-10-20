@@ -28,11 +28,11 @@ int main(void)
 		fib2a = fib2 / 100000000000;
 		fib2b = fib2 % 100000000000;
 
-		for (; counter < 98 ; counter++)
+		for (; counter < 98; counter++)
 		{
 			fib3a = fib1a + fib2a;
 			fib3b = fib1b + fib2b;
-		}
+
 		if (fib3b > 10000000000)
 		{
 			fib3b %= 10000000000;
@@ -40,7 +40,7 @@ int main(void)
 		}
 		if (counter != 97)
 		{
-			printf("%lu%lu, ", fib3a, fib3b);
+			printf("%ld%ld, ", fib3a, fib3b);
 			fib1a = fib2a;
 			fib1b = fib2b;
 			fib2a = fib3a;
@@ -48,5 +48,6 @@ int main(void)
 		}
 		else
 			printf("%lu%lu\n", fib3a, fib3b);
+		}
 		return (0);
 }
