@@ -20,14 +20,14 @@ int main(int argc, char **argv)
 	if (argc != 2)
 	{
 		printf("Error\n");
-		exit(2);
+		exit(1);
 	}
 
 	/*  Are bytes less than 0  */
 	if (atoi(argv[1]) < 0)
 	{
 		printf("Error\n");
-		exit(1);
+		exit(2);
 	}
 
 	for (i = 0; i < atoi(argv[1]); i++)
