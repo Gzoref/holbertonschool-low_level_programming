@@ -30,8 +30,9 @@ int (*get_op_func(char *s))(int, int)
 	{
 		if (strcmp(ops[i].op, s))
 			i++;
-		else
-			return (ops[i].f);
+
+
+		return (ops[i].f);
 	}
 	printf("Error\n");
 	exit(99);
