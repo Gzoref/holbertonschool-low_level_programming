@@ -6,10 +6,11 @@
 #include <string.h>
 
 /**
- * struct op - Struct op
+ * struct op - Retrieves function for given operation
  *
- * @op: The operator
- * @f: The function associated
+ * @op: char pointer
+ *
+ * @f: pointer function
  */
 
 typedef struct op
