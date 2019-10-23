@@ -31,16 +31,17 @@ int main(int argc, char **argv)
 	}
 
 	for (i = 0; i < atoi(argv[1]); i++)
-
 	{
 		printf("%02x", ((unsigned char *)main)[i]);
 
-		if (i < atoi(argv[1]))
-		{
-			putchar(' ');
-		}
+	if (i < atoi(argv[1]))
+
+
+		putchar(' ');
+
 	}
-		       printf("\n");
+	putchar('\n');
+
 
 	return (0);
 }
