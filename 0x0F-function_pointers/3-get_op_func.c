@@ -21,18 +21,22 @@ int (*get_op_func(char *s))(int, int)
 		{NULL, NULL}
 	};
 
+
 	int i = 0;
 
-	/*  While ops array & struct op is not NULL and ops vs s isn't equal */
 
 
-	while (ops[i].op)
+/* while 1< 4, s and s[0] (args) == pos. in struct.s[1] is empt =? true */
+
+	while (i <= 4)
 	{
-		if (strcmp(ops[i].op, s))
-			i++;
 
-		return (ops[i].f);
+		if (s && s[0] == ops[i].op[0] && !s[1])
+		{
+			return (ops[i].f);
+		}
+
+		i++;
 	}
-	printf("Error\n");
-	exit(99);
+	return (NULL);
 }
