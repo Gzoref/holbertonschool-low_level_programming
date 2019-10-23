@@ -27,13 +27,16 @@ int (*get_op_func(char *s))(int, int)
 
 	while (ops[i].op)
 	{
-		if (!strcmp(s, ops[i].op))
+		if (strcmp(ops[i].op, s))
+		{
+			i++;
+		}
+		else
 		{
 			return (ops[i].f);
 		}
-		i++;
 	}
 
-	printf("99\n");
+	printf("Error\n");
 	exit(99);
 }

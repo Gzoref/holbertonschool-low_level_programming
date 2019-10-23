@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
-* main - 2function description
+* main - Prints calculator result
 *
 * @argc: int of commandline args
 *
