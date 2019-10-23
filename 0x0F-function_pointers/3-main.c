@@ -20,5 +20,5 @@ int main(int argc, char **argv)
 		return (0);
 	}
 	printf("Error\n");
-	return (98);
+	exit(98);
 }
