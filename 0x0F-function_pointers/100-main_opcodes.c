@@ -30,18 +30,14 @@ int main(int argc, char **argv)
 		exit(2);
 	}
 
-	for (i = 0; i < atoi(argv[1]); i++)
+	while (i < atoi(argv[1]))
 	{
-		printf("%02x", ((unsigned char *)main)[i]);
-
-	if (i < atoi(argv[1]))
-
-
-		putchar(' ');
-
+		printf("%02x", *((unsigned char *)main + i));
+		i++;
+		if (i < atoi(argv[1]))
+			putchar(' ');
 	}
 	putchar('\n');
-
 
 	return (0);
 }
