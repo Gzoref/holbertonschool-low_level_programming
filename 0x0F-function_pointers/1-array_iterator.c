@@ -2,21 +2,27 @@
 #include <stdio.h>
 
 /**
- * print_name - Write a function that prints a name.
+ * array_iterator - executes func as a parameter on each array elem.
  *
- * @name: char pointer
+ * @array: int pointer
  *
- * @f: pointer
+ * @size: size_t
+ *
+ * @action: function pointer
  *
  * Return: void
  */
 
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-           unsigned int i;
-	   {
-		   if (array && size && action)
-			   for (i = 0; i < size; i++)
-				   action(i);
-	   }
+	unsigned int i;
+
+	if (array && size && action)
+	{
+		for (i = 0; i < size; i++)
+		{
+			action(array[i]);
+		}
+
+	}
 }
