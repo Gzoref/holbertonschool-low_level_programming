@@ -21,12 +21,22 @@ int (*get_op_func(char *s))(int, int)
 		{NULL, NULL}
 	};
 
-	int i;
+	int i = 0;
 
 	/*  While ops array & struct op is not NULL and ops vs s isn't equal */
-	while (ops[i].op != NULL && strcmp(ops[i].op, s) != 0)
+
+	while (ops[i].op)
 	{
+		if (strcmp(ops[i].op, s))
+		{
 			i++;
+		}
+			else
+			{
+				return (ops[i].f);
+			}
 	}
-	return (ops[i].f);
+
+	printf("Error\n");
+	exit(99);
 }
