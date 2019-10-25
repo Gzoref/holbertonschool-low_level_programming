@@ -9,44 +9,39 @@
 
 int main(void)
 {
-	int counter;
-	unsigned long int fib1, fib1a, fib1b, fib2, fib2a, fib2b,
-		fib3, fib3a, fib3b;
+	unsigned long int fiba, fiba1, fiba2, fib_b, fib_b1, fib_b2, fib_c,
+		fib_c1, fib_c2, fib_d, fib_e, div;
 
-	fib1 = 0, fib2 = 1;
 
-	for (counter = 0; counter < 91; counter++)
+	fiba = 1;
+	fib_b = 2;
+	div = 1000000000;
+	fib_c = fiba + fib_b;
+
+	printf("%lu, ", fiba);
+	printf("%lu, ", fib_b);
+
+	for (fib_d = 3; fib_d < 89; fib_d++)
 	{
-		fib3 = fib1  + fib2;
-		fib1 = fib2;
-		fib2 = fib3;
-		printf("%lu, ", fib3);
+		printf("%lu, ", fib_c);
+		fiba = fib_b;
+		fib_b = fib_c;
+		fib_c = fiba + fib_b;
 	}
-	fib1a = fib1 / 100000000000;
-	fib1b = fib1 % 100000000000;
-	fib2a = fib2 / 100000000000;
-	fib2b = fib2 % 100000000000;
-
-	for (; counter < 98; counter++)
+	fib_b1 = fib_b / div;
+	fib_b2 = fib_b % div;
+	fib_c1 = fib_c / div;
+	fib_c2 = fib_c % div;
+	for (fib_e = 89; fib_e < 98; fib_e++)
 	{
-		fib3a = fib1a + fib2a;
-		fib3b = fib1b + fib2b;
-
-		if (fib3b > 10000000000)
-		{
-			fib3b %= 10000000000;
-			fib3a++;
-		}
-		if (counter != 97)
-		{
-			printf("%ld%ld, ", fib3a, fib3b);
-			fib1a = fib2a;
-			fib1b = fib2b;
-			fib2a = fib3a;
-			fib2b = fib3b;
-		}
-		else
-			printf("%lu%lu\n", fib3a, fib3b);
+		printf("%lu%lu, ", fib_c1, fib_c2);
+		fiba1 = fib_b1;
+		fiba2 = fib_b2;
+		fib_b1 = fib_c1;
+		fib_b2 = fib_c2;
+		fib_c1 = fiba1 + fib_b1 + ((fiba2 + fib_b2) / div);
+		fib_c2 = (fiba2 + fib_b2) % div;
 	}
-		return (0);
+	printf("%lu%lu\n", fib_c1, fib_c2);
+	return (0);
 }
