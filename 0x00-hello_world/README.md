@@ -30,6 +30,6 @@
 ### Write a script that compiles a C file but does not link.
 -The C file name will be saved in the variable $CFILE
 -The output file should be named the same as the C file, but with the extension .o instead of .c.
--- Example: if the C file is main.c, the output file should be main.o
+- Example: if the C file is main.c, the output file should be main.o
 
-
+[2-assembler] (https://github.com/Gzoref/holbertonschool-low_level_programming/blob/master/0x00-hello_world/2-assembler)
