@@ -15,6 +15,7 @@ void print_all(const char * const format, ...)
 	int commaCheck = 0;
 
 	va_list ap;
+
 	va_start(ap, format);
 
 	while (format[i])
@@ -25,8 +26,8 @@ void print_all(const char * const format, ...)
 		switch (format[i])
 		{
 		case 'c':
-			printf("%c ", va_arg(ap, int));
-			break;
+		printf("%c ", va_arg(ap, int));
+		break;
 		case 'i':
 			printf("%i ", va_arg(ap, int));
 			break;
