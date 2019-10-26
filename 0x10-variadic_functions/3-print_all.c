@@ -10,13 +10,12 @@
 
 void print_all(const char * const format, ...)
 {
-	va_list ap;
-
-	va_start(ap, format);
-
 	char *str;
 	unsigned int i = 0;
 	int commaCheck = 0;
+
+	va_list ap;
+	va_start(ap, format);
 
 	while (format[i])
 	{
