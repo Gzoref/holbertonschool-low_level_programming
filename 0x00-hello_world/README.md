@@ -26,3 +26,5 @@
 <hr>
 
 [2-assembler](https://github.com/Gzoref/holbertonschool-low_level_programming/blob/master/0x00-hello_world/1-compiler)
+
+[1-Compiler](https://github.com/Gzoref/holbertonschool-low_level_programming/blob/master/0x00-hello_world/1-compiler)
