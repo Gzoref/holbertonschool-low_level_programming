@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-	print_all("cfisf", 'H', 0, "lberton", 3.14);
+	print_all("cisf", 'H', 0, "lberton", 3.14);
 	return (0);
 }
