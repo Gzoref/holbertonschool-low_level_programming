@@ -11,8 +11,7 @@
 void print_all(const char * const format, ...)
 {
 	char *str;
-	unsigned int i = 0;
-	int commaCheck = 0;
+	unsigned int i = 0, commaCheck = 0;
 
 	va_list ap;
 
@@ -26,8 +25,8 @@ void print_all(const char * const format, ...)
 		switch (format[i])
 		{
 		case 'c':
-		printf("%c", va_arg(ap, int));
-		break;
+			printf("%c", va_arg(ap, int));
+			break;
 		case 'i':
 			printf("%i", va_arg(ap, int));
 			break;
