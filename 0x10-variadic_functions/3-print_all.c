@@ -14,39 +14,41 @@ void print_all(const char * const format, ...)
 
 	va_start(ap, format);
 
-	char *str, *comma = "";
-	int i = 0;
+	char *str;
+	unsigned int i = 0;
+	int commaCheck = 0;
 
 	while (format[i])
 	{
-		if (format[i + 1])
-			comma = ", ";
+		if (commaCheck)
+			printf(", ");
 
 		switch (format[i])
 		{
 		case 'c':
-			printf("%c%s ", va_arg(ap, int), comma);
-			i++;
+			printf("%c ", va_arg(ap, int));
 			break;
 		case 'i':
-			printf("%i%s ", va_arg(ap, int), comma);
-			i++;
+			printf("%i ", va_arg(ap, int));
 			break;
 		case 'f':
-			printf("%f%s ", va_arg(ap, double), comma);
-			i++;
+			printf("%f ", va_arg(ap, double));
 			break;
 		case 's':
 			str = va_arg(ap, char*);
-			if (!str)
-				printf("nil");
-			else
-				printf("%s%s", str, comma);
-			i++;
-		default:
+			if (str)
+				printf("%s", str);
 			break;
-			if (format[i])
-				printf(", "); }
+			printf("%p", str);
+			break;
+		default:
+			commaCheck = 0;
+			i++;
+			continue;
+		}
+
+		commaCheck = 1;
+			i++;
 	}
 	putchar('\n');
 	va_end(ap);
