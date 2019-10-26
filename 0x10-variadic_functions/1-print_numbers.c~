@@ -2,11 +2,11 @@
 #include "variadic_functions.h"
 
 /**
- *  print_numbers -  prints numbers sepereated by seperator
+ *  print_string - function description
  *
  *  @seperator: String beetween numbers
  *
- *  @n: Number of args
+ *  @n: Num ber of args
  *
  *  Return void
  */
@@ -30,5 +30,5 @@ void print_numbers(const char *seperator, const unsigned int n, ...)
 	}
 	putchar('\n');
 
-	va_end(ap);
+       	va_end(ap);
 }

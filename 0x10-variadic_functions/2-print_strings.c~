@@ -3,7 +3,7 @@
 /**
  *  print_strings - Print strings
  *
- *  @separator: String beetween numbers
+ *  @seperator: String beetween numbers
  *
  *  @n: Number of args
  *
@@ -18,6 +18,8 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	char *args;
 
 	va_start(ap, n);
+
+
 
 	for (i = 0; i < n; i++)
 	{
