@@ -46,9 +46,7 @@ void print_all(const char * const format, ...)
 			i++;
 			continue;
 		}
-
-		commaCheck = 1;
-			i++;
+		commaCheck = 1,	i++;
 	}
 	putchar('\n');
 	va_end(ap);
