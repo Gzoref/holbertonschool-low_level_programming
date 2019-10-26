@@ -14,7 +14,7 @@
 - How to find the right header to include in your source code when using a standard library function
 - How does the `main` function influence the return value of the program
 
-*** Exercises
+*** Exercises ***
 0-preprocessor
 
 Write a script that runs a C file through the preprocessor
