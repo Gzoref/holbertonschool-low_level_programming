@@ -12,7 +12,6 @@ void print_all(const char * const format, ...)
 {
 	char *str;
 	unsigned int i = 0, commaCheck = 0;
-
 	va_list ap;
 
 	va_start(ap, format);
@@ -36,9 +35,11 @@ void print_all(const char * const format, ...)
 		case 's':
 			str = va_arg(ap, char*);
 			if (str)
+			{
 				printf("%s", str);
-			break;
-			printf("%p", str);
+				break;
+			}
+			printf("(nil)");
 			break;
 		default:
 			commaCheck = 0;
