@@ -20,7 +20,7 @@ int _strlen(const char *str)
 }
 
 /**
-* add_node - Adds node to end of linked list
+* add_node_end - Adds node to end of linked list
 *
 * @head: Double Pointer
 *
