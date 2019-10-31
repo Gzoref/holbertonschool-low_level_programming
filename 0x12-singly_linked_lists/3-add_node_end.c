@@ -22,7 +22,7 @@ int _strlen(const char *str)
 /**
 * add_node - Adds node to end of linked list
 *
-* @head - Double Pointer
+* @head: Double Pointer
 *
 * @str: Pointer to struct pointer
 *
