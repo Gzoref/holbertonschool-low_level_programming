@@ -4,7 +4,7 @@
 /**
 * print_list - Prints linked list
 *
-* @h - Points to struct
+* @h: Points to struct
 *
 * Return: Integer
 */
