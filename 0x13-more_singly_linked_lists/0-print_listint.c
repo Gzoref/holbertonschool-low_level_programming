@@ -1,13 +1,11 @@
 #include "lists.h"
 
 /**
- *  function - function description
+ *  print_listint - Prints elements of a list
  *
- *  @param1: description
+ *  @param1: const struct listint_t
  *
- *  @param2: description
- *
- *  Return return type
+ *  Return size_t
  */
 
 size_t print_listint(const listint_t *h)
@@ -22,4 +20,3 @@ size_t print_listint(const listint_t *h)
 	}
 	return (index);
 }
-
