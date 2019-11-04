@@ -3,9 +3,9 @@
 /**
  *  print_listint - Prints elements of a list
  *
- *  @param1: const struct listint_t
+ *  @h: const struct listint_t
  *
- *  Return size_t
+ *  Return:x size_t
  */
 
 size_t print_listint(const listint_t *h)
