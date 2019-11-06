@@ -12,4 +12,10 @@ size_t free_listint_safe(listint_t **h)
 {
 	size_t count = 0;
 	listint_t *head, *new_node;
+	
+	if (*h == NULL)
+	{
+		return (0);
+	}
+	return (count);
 }
