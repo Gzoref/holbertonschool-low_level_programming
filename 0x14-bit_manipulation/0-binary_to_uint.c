@@ -10,8 +10,8 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int index = 0;
-	unsigned int number = 0, number1, decimal_value = 0;
+	unsigned long int index = 0;
+	unsigned long int number = 0, number1, decimal_value = 0;
 
 	if (b == NULL)
 	{
@@ -28,6 +28,7 @@ unsigned int binary_to_uint(const char *b)
 	}
 
 	index = 0;
+
 	number = _atoi(b);
 
 	while (number != 0)
@@ -51,7 +52,7 @@ unsigned int binary_to_uint(const char *b)
 
 unsigned int _atoi(const char *str)
 {
-	unsigned int index = 0, result = 0;
+	unsigned long int index = 0, result = 0;
 
 	for (index = 0; str[index] != '\0'; index++)
 	{
