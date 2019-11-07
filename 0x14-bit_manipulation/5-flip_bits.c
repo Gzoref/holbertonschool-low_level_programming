@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * flip_bit - Number of bits needed to flip to get from one number to another.
+ * flip_bits - Number of bits needed to flip to get from one number to another.
  *
  * @n: long int
  *
