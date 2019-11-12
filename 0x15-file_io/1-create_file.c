@@ -13,7 +13,7 @@
 int create_file(const char *filename, char *text_content)
 {
 	int fp;
-	ssize_t length = 0, bytes = 0;
+	ssize_t length = 0, bytes;
 
 	while (text_content[length] != '\0')
 	{
