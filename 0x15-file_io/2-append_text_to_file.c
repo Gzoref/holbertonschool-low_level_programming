@@ -13,14 +13,14 @@
 
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int fdopen, fdwrite, length = 0;
+	int fdOpen, fdWrite, length = 0;
 
 	if (filename == NULL)
 		return (-1);
 
-	fdopen = open(filename, O_WRONLY | O_APPEND);
+	fdOpen = open(filename, O_WRONLY | O_APPEND);
 
-	if (fdopen == -1)
+	if (fdOpen == -1)
 	{
 		return (-1);
 	}
@@ -33,12 +33,12 @@ int append_text_to_file(const char *filename, char *text_content)
 		length++;
 	}
 
-	fdwrite = write(fdopen, text_content, length);
+	fdWrite = write(fdOpen, text_content, length);
 
-	if (fdwrite == -1)
+	if (fdWrite == -1)
 		return (-1);
 
-	close(fdopen);
+	close(fdOpen);
 
 	return (1);
 }
