@@ -12,8 +12,9 @@
 
 int main(int argc, char **argv)
 {
-	int fd, fd2, fdWrite, fdRead = 1;
-	char *buffer;
+	int fd, fd2, fdWrite;
+	ssize_t fdRead;
+	char buffer[1024];
 
 	if (argc != 3)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
@@ -21,16 +22,16 @@ int main(int argc, char **argv)
 	fd = open(argv[1], O_RDONLY);
 
 	if (fd == -1)
+	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-			exit(98);
+		exit(98);
+	}
 	fd2 = open(argv[2], (O_CREAT | O_WRONLY | O_TRUNC), 0664);
-
 	if (fd2 == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to  %s\n", argv[2]), exit(99);
 
-	while (fdRead != 0)
+	while ((fdRead = read(fd, buffer, sizeof(buffer) != 0)))
 	{
-		fdRead = read(fd, buffer, sizeof(buffer));
 		if (fdRead == 1)
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
