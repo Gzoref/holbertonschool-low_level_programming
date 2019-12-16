@@ -1,13 +1,13 @@
 #include "lists.h"
 
 /**
- *  add_nodeint_end - Adds a new node at the end
+ * add_nodeint_end - Adds a new node at the end
  *
  * @head: struct
  *
  * @n: const int
  *
- *  Return: listint_t
+ * Return: listint_t
  */
 
 listint_t *add_nodeint_end(listint_t **head, const int n)
