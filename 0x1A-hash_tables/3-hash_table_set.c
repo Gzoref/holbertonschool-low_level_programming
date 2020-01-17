@@ -14,40 +14,42 @@
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int slot =  hash_djb2(key);
+	unsigned long int slot = 0;
 
-	hash_node_t *entry = ht->array[slot];
+	hash_node_t *temp, *new_hash = malloc(sizeof(hash_node_t));
 
-	if (key == NULL)
+	if (ht == NULL)
 	{
 		return (0);
 	}
 
-	hash_node_t *new_pair = malloc(sizeof(hash_table_t));
-	if (new_pair == NULL)
+	if (strcmp("", key) == 0)
 	{
 		return (0);
 	}
 
-	new_pair->key = malloc(sizeof(hash_table_t) + 1);
-	if (new_pair->key == NULL)
+	slot = key_index((const unsigned char *) key, ht->size);
+
+	if (new_hash == NULL)
 	{
 		return (0);
 	}
 
-	new_pair->value = malloc(sizeof(hash_table_t) + 1);
-	if (new_pair->value)
+	while (temp != NULL)
 	{
-		return (0);
+		if (strcmp(temp->key, key) == 0)
+		{
+			free(temp->value);
+			free(new_hash);
+			temp->value = strdup(value);
+			return (1);
+		}
+		temp = temp->next;
 	}
-
-	strcpy(new_pair->key, key);
-	strcpy(new_pair->value, value);
-
-	if (entry == NULL)
-	{
-		ht->array[slot] = new_pair;
-	}
+	new_hash->key = strdup(key);
+	new_hash->value = strdup(value);
+	new_hash->next = ht->array[slot];
+	ht->array[slot] = new_hash;
 
 	return (1);
 }
