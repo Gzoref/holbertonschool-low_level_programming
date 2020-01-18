@@ -16,38 +16,39 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int slot = 0;
 
-	hash_node_t *temp, *new_hash = malloc(sizeof(hash_node_t));
+	hash_node_t *new_hash = NULL;
 
-	if (ht == NULL)
+	if (ht == NULL || !key || strlen(key) == 0 || value == NULL)
 	{
 		return (0);
 	}
 
-	if (strcmp("", key) == 0)
-	{
-		return (0);
-	}
+	slot = hash_djb2((const unsigned char *)key) % ht->size;
 
-	slot = key_index((const unsigned char *) key, ht->size);
+	new_hash = malloc(sizeof(hash_node_t));
 
 	if (new_hash == NULL)
 	{
 		return (0);
 	}
 
-	while (temp != NULL)
-	{
-		if (strcmp(temp->key, key) == 0)
-		{
-			free(temp->value);
-			free(new_hash);
-			temp->value = strdup(value);
-			return (1);
-		}
-		temp = temp->next;
-	}
 	new_hash->key = strdup(key);
+
+	if (new_hash->key == NULL)
+	{
+		free(new_hash);
+		return (0);
+	}
+
 	new_hash->value = strdup(value);
+
+	if (new_hash->value == NULL)
+	{
+		free(new_hash->key);
+		free(new_hash);
+		return (0);
+	}
+
 	new_hash->next = ht->array[slot];
 	ht->array[slot] = new_hash;
 
