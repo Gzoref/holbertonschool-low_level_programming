@@ -21,15 +21,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new_hash = malloc(sizeof(hash_node_t));
 
 	if (ht == NULL || !key || strlen(key) == 0 || value == NULL)
-	{
 		return (0);
-	}
 
 	if (new_hash == NULL)
-	{
 		return (0);
-	}
-
 	temp = new_hash;
 	slot = key_index((const unsigned char *)key, ht->size);
 
@@ -49,19 +44,15 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			new_hash = new_hash->next;
 		}
 	}
-
 	new_hash = hash_table_pair(key, value);
-
 	if (new_hash == NULL)
 	{
 		free(new_hash);
 		return (0);
 	}
-
 	new_hash->next = ht->array[slot];
 	ht->array[slot] = new_hash;
 	free(temp);
-
 	return (1);
 }
 
