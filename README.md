@@ -34,9 +34,6 @@
 
 ### [0x0F. C - Variadic functions](./0x0F-variadic_functions)
 
-### [0x10. C - printf](https://github.com/kai-dg/printf)
-* 2-man project.
-
 ### [0x11. C - Singly linked lists](./0x11-singly_linked_lists)
 
 ### [0x12. C - More singly linked lists](./0x12-more_singly_linked_lists)
@@ -44,9 +41,6 @@
 ### [0x13. C - Bit manipulation](./0x13-bit_manipulation)
 
 ### [0x14. C - File I/O](./0x14-file_io)
-
-### [0x15. C - Simple Shell](https://github.com/kai-dg/simple_shell)
-* 3-man project.
 
 ### [0x16. C - Doubly linked lists](./0x16-doubly_linked_lists)
 
@@ -57,4 +51,4 @@
 ---
 
 ## Author
- Geoffrey Zoref - [kai-dg](https://github.com/gzoref)
+ Geoffrey Zoref - [Geoffrey Zoref](https://github.com/gzoref)
