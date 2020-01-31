@@ -1,6 +1,7 @@
 # Holberton School Low-level Programming
 
 ---
+## Table of Contents :open_file_folder:
 
 ### [0x00. C - Hello, World](./0x00-hello_world)
 
