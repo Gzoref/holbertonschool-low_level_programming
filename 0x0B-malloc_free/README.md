@@ -1,35 +1,41 @@
-# 0x0C. C - More malloc, free
+# 0x0B. C - malloc, free
 
 ## Description
 What you should learn from this project:
 
-* How to use the exit function
-* What are the functions calloc and realloc from the standard library and how to use them
+* What is the difference between automatic and dynamic allocation
+* What is malloc and free and how to use them
+* Why and when use malloc
+* How to use valgrind to check for memory leak
 
 ---
 
-### [0. Trust no one](./0-malloc_checked.c)
-* Write a function that allocates memory using malloc.
+### [0. Float like a butterfly, sting like a bee](./0-create_array.c)
+* Write a function that creates an array of chars, and initializes it with a specific char.
 
 
-### [1. string_nconcat](./1-string_nconcat.c)
+### [1. The woman who has no imagination has no wings](./1-strdup.c)
+* Write a function that returns a pointer to a newly allocated space in memory, which contains a copy of the string given as a parameter.
+
+
+### [2. He who is not courageous enough to take risks will accomplish nothing in life](./2-str_concat.c)
 * Write a function that concatenates two strings.
 
 
-### [2. _calloc](./2-calloc.c)
-* Write a function that allocates memory for an array, using malloc.
+### [3. If you even dream of beating me you'd better wake up and apologize](./3-alloc_grid.c)
+* Write a function that returns a pointer to a 2 dimensional array of integers.
 
 
-### [3. array_range](./3-array_range.c)
-* Write a function that creates an array of integers.
+### [4. It's not bragging if you can back it up](./4-free_grid.c)
+* Write a function that frees a 2 dimensional grid previously created by your alloc_grid function.
 
 
-### [4. _realloc](./100-realloc.c)
-* Write a function that reallocates a memory block using malloc and free
+### [5. It isn't the mountains ahead to climb that wear you out; it's the pebble in your shoe](./5-argstostr.c)
+* Write a function that concatenates all the arguments of your program.
 
 
-### [5. We must accept finite disappointment, but never lose infinite hope](./101-mul.c)
-* Write a program that multiplies two positive numbers.
+### [6. I will show you how great I am](./100-strtow.c)
+* Write a function that splits a string into words.
 
 ---
 
