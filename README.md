@@ -49,6 +49,8 @@
 
 ### [0x18. C - Stacks, Queues - LIFO, FIFO](./0x18-stacks_queues_lifo_fifo)
 
+### [0x18. C - 0x1C-makefiles](./0x1C-makefiles)
+
 ---
 
 ## Author
