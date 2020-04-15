@@ -50,7 +50,7 @@ int recursive_binary_search(int *array, int left, int right, int value)
 	/* If value is smaller then middle, look in first half of array */
 	if (right >= left)
 	{
-		middle = left + (right - 1) / 2;
+		middle = left + (right - left) / 2;
 		print_search(array, left, right);
 
 		/* If search finds value in middle, return value */
