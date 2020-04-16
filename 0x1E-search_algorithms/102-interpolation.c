@@ -23,7 +23,7 @@ int interpolation_search(int *array, size_t size, int val)
 	{
 
 		/* Probe position formula */
-		position = lo + (((float)(hi - lo) /
+		position = lo + (((double)(hi - lo) /
 			     (array[hi] - array[lo])) * (val - array[lo]));
 
 		if (position < (int)size)
