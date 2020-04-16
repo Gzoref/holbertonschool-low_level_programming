@@ -7,7 +7,7 @@ int min(int a, int b);
 
 
 /**
- * exponentia_search - Searches value in array with the Exponentia search algo
+ * exponential_search - Searches value in array with the Exponentia search algo
  *
  * @array: Array to search
  *
