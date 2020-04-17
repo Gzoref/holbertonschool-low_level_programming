@@ -6,7 +6,7 @@ void print_search(int *array, int first, int last);
 int min(int a, int b);
 
 /**
- * exponentia_search - Searches value in array with the Exponential search algo
+ * exponential_search - Searches value in array with the Exponential search algo
  *
  * @array: Array to search
  *
@@ -34,7 +34,7 @@ int exponential_search(int *array, size_t size, int value)
 			printf("Value checked array[%d] = [%d]\n", index, array[index]);
 			index *= 2;
 		}
-		return (recursive_binary_search(array, index / 2, min(index, size), value));
+		return (recursive_binary_search(array, index / 2, min(index, (int)size - 1), value));
 	}
 	return (-1);
 }
