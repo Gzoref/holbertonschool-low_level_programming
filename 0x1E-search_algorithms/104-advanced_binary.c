@@ -60,13 +60,14 @@ int recursive_binary_search(int *array, int left, int right, int value)
 		}
 
 		/* If element is less than middle, search left subarray */
-		if (array[middle] > value)
+		if (array[middle] < value)
 		{
-			return (recursive_binary_search(array, left, middle - 1, value));
+			return (recursive_binary_search(array, middle + 1, right, value));
 		}
 
 		/* Otherwise search for value in right subarray */
-		return (recursive_binary_search(array, middle + 1, right, value));
+		return (recursive_binary_search(array, left, middle, value));
+
 	}
 	/* If element doesn't exist return -1 */
 	return (-1);
