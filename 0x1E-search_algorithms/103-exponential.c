@@ -41,7 +41,7 @@ int exponential_search(int *array, size_t size, int value)
 
 
 /**
- * rec_binary_search - Recursively breaks array into subarrays & searches
+ * r_binary_search - Recursively breaks array into subarrays & searches
  *
  * @array: Array to search
  *
