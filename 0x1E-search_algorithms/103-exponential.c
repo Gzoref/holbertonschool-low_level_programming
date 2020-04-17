@@ -1,7 +1,7 @@
 #include "search_algos.h"
 #include <math.h>
 
-int rec_binary_search(int *array, int left, int right, int value);
+int r_binary_search(int *array, int left, int right, int value);
 void print_search(int *array, int first, int last);
 int min(int a, int b);
 
@@ -34,7 +34,7 @@ int exponential_search(int *array, size_t size, int value)
 			printf("Value checked array[%d] = [%d]\n", index, array[index]);
 			index *= 2;
 		}
-		return (rec_binary_search(array, index / 2, min(index, (int)size - 1), value));
+		return (r_binary_search(array, index / 2, min(index, (int)size - 1), value));
 	}
 	return (-1);
 }
@@ -54,7 +54,7 @@ int exponential_search(int *array, size_t size, int value)
  * Return: First index where value is located or -1 for NULL array
  */
 
-int rec_binary_search(int *array, int left, int right, int value)
+int r_binary_search(int *array, int left, int right, int value)
 {
 
 	int middle;
@@ -75,11 +75,11 @@ int rec_binary_search(int *array, int left, int right, int value)
 		/* If element is less than middle, search left subarray */
 		if (array[middle] > value)
 		{
-			return (rec_binary_search(array, left, middle - 1, value));
+			return (r_binary_search(array, left, middle - 1, value));
 		}
 
 		/* Otherwise search for value in right subarray */
-		return (rec_binary_search(array, middle + 1, right, value));
+		return (r_binary_search(array, middle + 1, right, value));
 	}
 	/* If element doesn't exist return -1 */
 	return (-1);
