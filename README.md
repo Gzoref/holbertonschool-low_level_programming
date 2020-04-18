@@ -19,13 +19,13 @@
 
 ### [0x07. C - Even more, more pointers, arrays and strings](./0x07-pointers_arrays_strings)
 
-### [0x08. C - recursion](./0x08-recursion)
+### [0x08. C - Recursion](./0x08-recursion)
 
 ### [0x09. C - Static libraries](./0x09-static_libraries)
 
-### [0x0A C -  argc, argv](./0x0A-argc_argv)
+### [0x0A C -  Argc, Argv](./0x0A-argc_argv)
 
-### [0x0B. C - malloc, free](./0x0B-malloc_free)
+### [0x0B. C - Malloc, Free](./0x0B-malloc_free)
 
 ### [0x0C. C - More malloc, free](./0x0C-more_malloc_free)
 
@@ -51,9 +51,9 @@
 
 ### [0x19. C - Stacks, Queues - LIFO, FIFO](./0x19-stacks_queues_lifo_fifo)
 
-### [0x1C. C - 0x1C-makefiles](./0x1C-makefiles)
+### [0x1C. C - Makefiles](./0x1C-makefiles)
 
-### [0x1E-search_algorithms](.0x1E-search_algorithms)
+### [0x1E  C - Search Algorithms](./0x1E-search_algorithms)
 
 ---
 
