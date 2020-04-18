@@ -53,6 +53,8 @@
 
 ### [0x1C. C - 0x1C-makefiles](./0x1C-makefiles)
 
+### [0x1E-search_algorithms](.0x1E-search_algorithms)
+
 ---
 
 ## Author
