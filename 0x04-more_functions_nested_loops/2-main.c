@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
  * main - check the code for Holberton School students.
@@ -7,9 +8,7 @@
  */
 int main(void)
 {
-    print_triangle(2);
-    print_triangle(10);
-    print_triangle(1);
-    print_triangle(0);
+    printf("%d\n", mul(98, 1024));
+    printf("%d\n", mul(-402, 4096));
     return (0);
 }
